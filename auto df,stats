@@ -1,0 +1,148 @@
+if game.PlaceId == 10320676839 then
+getgenv().SecureMode = true
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+-- value
+getgenv().autorandom = true
+getgenv().autostatmagic = true
+getgenv().autostatmelee = true
+getgenv().autostatdef = true
+getgenv().autostatweapon = true
+-- functions
+function autostatmagic()
+ while getgenv().autostatmagic == true do
+  wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeStatsRemote:FireServer(table.unpack({
+    [1] = "Magic",
+    [2] = 1,
+}))
+    end
+  end
+
+function autostatmelee()
+ while getgenv().autostatmelee == true do
+ wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeStatsRemote:FireServer(table.unpack({
+    [1] = "Strength",
+    [2] = 1,
+}))
+    end
+  end
+
+function autostatdef()
+    while getgenv().autostatdef == true do
+wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeStatsRemote:FireServer(table.unpack({
+    [1] = "Endurance",
+    [2] = 1,
+}))
+    end
+  end
+
+function autostatweapon()
+    while getgenv().autostatweapon == true do
+  wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.UpgradeStatsRemote:FireServer(table.unpack({
+    [1] = "Weapon",
+    [2] = 1,
+})) 
+    end
+  end
+
+local function autorandom()
+  while getgenv().autorandom == true do
+   wait(0.1)
+game:GetService("ReplicatedStorage").RemoteEvents.BuyDevilFruitRemote:FireServer("DF")
+  end
+end
+ 
+local Window = Rayfield:CreateWindow({
+   Name = "CetHub",
+   LoadingTitle = "Rayfield",
+   LoadingSubtitle = "by AngCet",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = PXXL, 
+      FileName = "Cet Hub"
+},
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink",
+      RememberJoins = true
+   },
+   KeySystem = false,
+      KeySettings = {
+      Title = "WSP",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key",
+      SaveKey = true,
+      GrabKeyFromSite = false,
+      Key = {"Hello"}
+   }
+})
+-- toggles
+local CetTab = Window:CreateTab("Cet", 4483362458) -- Title, Image
+
+local Toggle = CetTab:CreateToggle({
+   Name = "Auto Random",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+      getgenv().autorandom = Value
+      autorandom()
+    end,
+})
+
+local Toggle = CetTab:CreateToggle({
+   Name = "Auto Stat Magic",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+      getgenv().autostatmagic = Value
+      autostatmagic()
+    end,
+})
+
+local Toggle = CetTab:CreateToggle({
+   Name = "Auto Stat Melee",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+      getgenv().autostatmelee = Value
+      autostatmelee()
+    end,
+})
+
+local Toggle = CetTab:CreateToggle({
+   Name = "Auto Stat Weapon",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+      getgenv().autostatweapon = Value
+      autostatweapon()
+    end,
+})
+
+local Toggle = CetTab:CreateToggle({
+   Name = "Auto Stat Def",
+   CurrentValue = false,
+   Flag = "Toggle1", 
+   Callback = function(Value)
+      getgenv().autostatdef = Value
+      autostatdef()
+    end,
+})
+
+-- keybinds
+  local Keybind = Tab:CreateKeybind({
+   Name = "Q",
+   CurrentKeybind = "Q",
+   HoldToInteract = false,
+   Flag = "Keybind1", 
+   Callback = function(Keybind)
+   end,
+})
+
+Keybind:Set("RightCtrl") -- Keybind (string)
+end
