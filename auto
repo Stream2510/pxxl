@@ -106,11 +106,11 @@ game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
 local args = {
     [1] ="ItemStorage7"}
 game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
-wait(S_time)
+wait(S_time2)
 local args = {
     [1] = "Better Clothes"}
 game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
-wait(S_time3)
+wait(S_time2)
 game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
 wait(S_time2)
 local args = {
