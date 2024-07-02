@@ -110,7 +110,7 @@ wait(S_time)
 local args = {
     [1] = "Better Clothes"}
 game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
-wait(S_tinme3)
+wait(S_time3)
 game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
 wait(S_time2)
 local args = {
