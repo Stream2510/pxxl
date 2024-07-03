@@ -1,33 +1,3 @@
-local DropGUI = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local DropTool = Instance.new("TextButton")
-local Equip = Instance.new("TextButton")
-local Version = Instance.new("TextButton")
-local Cred = Instance.new("TextButton")
-DropGUI.Name = "Drop GUI"
-DropGUI.Parent = game.CoreGui
-DropGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-main.Name = "main"
-main.Parent = DropGUI
-main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-main.Position = UDim2.new(0.0809101239, 0, 0.203790441, 0)
-main.Size = UDim2.new(0, 50, 0, 68)
-main.Active = true
-main.Draggable = true
-Equip.Name = "Wish"
-Equip.Parent = main
-Equip.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-Equip.Position = UDim2.new(0.566169071, 0, 0.119906083, 0)
-Equip.Size = UDim2.new(0, 30, 0, 40)
-Equip.Font = Enum.Font.SourceSans
-Equip.Text = "Equip"
-Equip.TextColor3 = Color3.fromRGB(0, 0, 0)
-Equip.TextScaled = true
-Equip.TextSize = 14.000
-Equip.TextWrapped = true
-Equip.MouseButton1Down:Connect(function()
-
-
 
 local S_time = 1.0
 local S_time2 = 0.5
