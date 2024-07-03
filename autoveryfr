@@ -27,8 +27,8 @@ Equip.TextSize = 14.000
 Equip.TextWrapped = true
 Equip.MouseButton1Down:Connect(function()
 
-local S_time = 2.0
-local S_time2 = 2.0
+local S_time = 1.5
+local S_time2 = 1
 local S_time3 = 2.5
 local args = {
     [1] ="ItemStorage1"}
