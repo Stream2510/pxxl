@@ -32,7 +32,7 @@ local S_time2 = 0.5
 local S_time3 = 2.5
 n = 0
 while (n < 20) do
-    n = n + 1
+	n = n + 1
 	local args = {
     	[1] ="ItemStorage1"}
 	game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
