@@ -1,0 +1,14 @@
+local S_time = 1.0
+local S_time2 = 0.5
+local S_time3 = 2.5
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
