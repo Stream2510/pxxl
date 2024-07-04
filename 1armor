@@ -1,0 +1,118 @@
+local DropGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local DropTool = Instance.new("TextButton")
+local Equip = Instance.new("TextButton")
+local Version = Instance.new("TextButton")
+local Cred = Instance.new("TextButton")
+DropGUI.Name = "Drop GUI"
+DropGUI.Parent = game.CoreGui
+DropGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+main.Name = "main"
+main.Parent = DropGUI
+main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+main.Position = UDim2.new(0.0809101239, 0, 0.203790441, 0)
+main.Size = UDim2.new(0, 50, 0, 68)
+main.Active = true
+main.Draggable = true
+Equip.Name = "Wish"
+Equip.Parent = main
+Equip.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Equip.Position = UDim2.new(0.566169071, 0, 0.119906083, 0)
+Equip.Size = UDim2.new(0, 30, 0, 40)
+Equip.Font = Enum.Font.SourceSans
+Equip.Text = "Equip"
+Equip.TextColor3 = Color3.fromRGB(0, 0, 0)
+Equip.TextScaled = true
+Equip.TextSize = 14.000
+Equip.TextWrapped = true
+Equip.MouseButton1Down:Connect(function()
+
+local S_time = 1.0
+local S_time2 = 0.5
+local S_time3 = 2.5
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage2"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage2"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage3"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage3"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage4"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage4"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage5"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage5"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage6"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage6"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage7"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage7"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time2)
+local args = {
+    [1] = "Better Clothes"}
+game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
+wait(S_time2)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+local args = {
+    [1] = "!giveitem LongHunterZ"}
+game:GetService("ReplicatedStorage").RemoteEvents.CommandsRemote:FireServer(unpack(args))
