@@ -6,7 +6,6 @@ local MMS = "Obito's Mangekyo Sharingan v1"
 local Player = game:GetService("Players")
 local Specs = Player.LocalPlayer.PlayerValues.Specialization
 local Spec = MMS
-local S_time = 10
 _G.SSpin = true
 
 spawn(function()
