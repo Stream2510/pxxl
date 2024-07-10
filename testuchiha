@@ -1,0 +1,32 @@
+local S_time = 1.0
+local S_time2 = 0.5
+local S_time3 = 2.5
+local S_time4 = 10.0
+local MMS = "Obito's Mangekyo Sharingan v1"
+local Player = game:GetService("Players")
+local Specs = Player.LocalPlayer.PlayerValues.Specialization
+local Spec = MMS
+local S_time = 10
+_G.SSpin = true
+
+spawn(function()
+while _G.SSpin == true do
+  if 
+    Specs.value == Spec
+  then 
+    return
+  end
+wait(0.5)
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time4)
+end
+end)
