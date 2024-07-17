@@ -4,6 +4,7 @@ local S_time3 = 2.5
 local Races = Player.LocalPlayer.PlayerValues.Race
 local jiren = "Jiren's Race"
 local majin = "Majin"
+local fanalis = "Fanalis"
 
 _G.RSpin = true
 
@@ -96,7 +97,7 @@ while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
     local Races = Player.LocalPlayer.PlayerValues.Race
-    if Races == majin or Races == jiren then
+    if Races == majin or Races == jiren or Races == fanalis then
         _G.RSpin = false
     end
 end
