@@ -1,0 +1,102 @@
+local S_time = 1.5
+local S_time2 = 1
+local S_time3 = 2.5
+local Races = Player.LocalPlayer.PlayerValues.Race
+local jiren = "Jiren's Race"
+local majin = "Majin"
+
+_G.RSpin = true
+
+function autorace()
+    local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage1"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage2"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage2"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage3"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage3"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage4"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage4"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage5"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage5"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage6"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage6"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait (S_time2)
+local args = {
+    [1] ="ItemStorage7"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time)
+game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+wait(S_time2)
+game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+local args = {
+    [1] ="ItemStorage7"}
+game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+wait(S_time2)
+local args = {
+    [1] = "Be Reborn"
+}
+game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
+wait(S_time3)
+end
+
+while _G.RSpin do
+    autorace()
+    wait(0.1) -- add a small delay to avoid spamming the server
+    local Races = Player.LocalPlayer.PlayerValues.Race
+    if Races == majin or Races == jiren then
+        _G.RSpin = false
+    end
+end
