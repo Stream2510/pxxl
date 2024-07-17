@@ -7,6 +7,12 @@ local jiren = "Jiren's Race"
 local majin = "Majin"
 local fanalis = "Fanalis"
 
+ab4 = {
+    "Jiren's Race",
+    "Majin",
+    "Fanalis"
+}
+
 _G.RSpin = true
 
 function autorace()
@@ -79,7 +85,7 @@ end
 while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Races == majin or Races == jiren or Races == fanalis then
+    if Races == ab4 then
         _G.RSpin = false
     end
 end
