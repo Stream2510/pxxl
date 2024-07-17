@@ -1,3 +1,4 @@
+local Player = game:GetService("Players")
 local S_time = 1.5
 local S_time2 = 1
 local S_time3 = 2.5
@@ -75,7 +76,7 @@ function autorace()
     wait(S_time2)
 end
 
-while _G.RSpin = true do
+while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
     if Races == majin or Races == jiren or Races == fanalis then
