@@ -8,10 +8,7 @@ local fanalis = "Fanalis"
 
 _G.RSpin = true
 
-local function autorace()
-    local S_time = -- define S_time here
-    local S_time2 = -- define S_time2 here
-    local S_time3 = -- define S_time3 here
+function autorace()
 
     local args = { [1] ="ItemStorage1"}
     game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
