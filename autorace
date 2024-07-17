@@ -85,10 +85,9 @@ function autorace()
     wait(S_time3)
 end
 
-while _G.RSpin do
+while _G.RSpin = true do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
-    local Races = Player.LocalPlayer.PlayerValues.Race
     if Races == majin or Races == jiren or Races == fanalis then
         _G.RSpin = false
     end
