@@ -7,7 +7,7 @@ local jiren = "Jiren's Race"
 local majin = "Majin"
 local fanalis = "Fanalis"
 
-ab4 = {
+local Race = {
     "Jiren's Race",
     "Majin",
     "Fanalis"
@@ -88,7 +88,7 @@ end
 while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Races == ab4 then
+    if Races.value == Race then
         _G.RSpin = false
     end
 end
