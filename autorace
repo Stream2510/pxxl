@@ -88,7 +88,14 @@ end
 while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Races.value == majin or Races.value == jiren or Races.value == fanalis then
+    if Races.value == majin or Races.value == jiren then
         _G.RSpin = false
     end
 end
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
