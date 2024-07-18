@@ -7,6 +7,7 @@ local S_time2 = 1
 local S_time3 = 2.5
 local MMS = "Madara's Mangekyo Sharingan v1"
 local Itachi1 = "Itachi's Mangekyo Sharingan v1"
+local Itachi2 = "Itachi's Mangekyo Sharingan v2"
 _G.SSpin = true
 
 function autospec()
@@ -25,7 +26,7 @@ end
 while _G.SSpin do
     autospec()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Specs.value == Itachi1 then
+    if Specs.value == Itachi1 or Specs.value == Itachi2 then
         _G.SSpin = false
     end
 end
