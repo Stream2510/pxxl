@@ -1,0 +1,38 @@
+
+local Player = game:GetService("Players")
+local Specs = Player.LocalPlayer.PlayerValues.Specialization
+local Races = Player.LocalPlayer.PlayerValues.Race
+local S_time = 1.5
+local S_time2 = 1
+local S_time3 = 2.5
+local MMS = "Madara's Mangekyo Sharingan v1"
+local Itachi1 = "Itachi's Mangekyo Sharingan v1"
+_G.SSpin = true
+
+function autospec()
+
+    local args = {[1] ="ItemStorage1"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {[1] ="ItemStorage1"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+end
+
+while _G.SSpin do
+    autospec()
+    wait(0.1) -- add a small delay to avoid spamming the server
+    if Specs.value == MMS or Specs.value == Itachi1 then
+        _G.SSpin = false
+    end
+end
+
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
