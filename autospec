@@ -25,7 +25,7 @@ end
 while _G.SSpin do
     autospec()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Specs.value == MMS or Specs.value == Itachi1 then
+    if Specs.value == Itachi1 then
         _G.SSpin = false
     end
 end
