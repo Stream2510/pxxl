@@ -88,7 +88,7 @@ end
 while _G.RSpin do
     autorace()
     wait(0.1) -- add a small delay to avoid spamming the server
-    if Races.value == Race then
+    if Races.value == majin or Races.value == jiren or Races.value == fanalis then
         _G.RSpin = false
     end
 end
