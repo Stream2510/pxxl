@@ -6,13 +6,6 @@ local Races = Player.LocalPlayer.PlayerValues.Race
 local jiren = "Jiren's Race"
 local majin = "Majin"
 local fanalis = "Fanalis"
-
-local Race = {
-    "Jiren's Race",
-    "Majin",
-    "Fanalis"
-}
-
 _G.RSpin = true
 
 function autorace()
