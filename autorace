@@ -80,6 +80,9 @@ function autorace()
     local args = {[1] ="ItemStorage7"}
     game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
     wait(S_time2)
+    local args = {[1] = "Be Reborn"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
+    wait(S_time)
 end
 
 while _G.RSpin do
