@@ -1,0 +1,12 @@
+local function equipItem(itemName)
+    local args = {[1] = itemName}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+end
+
+local items = {"ItemStorage1", "ItemStorage2", "ItemStorage3", "ItemStorage4", "ItemStorage5", "ItemStorage6", "ItemStorage7"}
+-- Equip all 7 items simultaneously
+for _, itemName in pairs(items) do
+    coroutine.wrap(function() equipItem(itemName) end)()
+end
