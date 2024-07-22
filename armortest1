@@ -1,0 +1,36 @@
+local Stime = 1
+local S_time2 = 1
+local S_time3 = 2.5
+
+local function equipItem(itemName)
+    local args = {[1] = itemName}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+end
+
+local function useItem(itemName)
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    wait(S_time2)
+    local args = {[1] = itemName}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+end
+
+local items = {"ItemStorage1", "ItemStorage2", "ItemStorage3", "ItemStorage4", "ItemStorage5", "ItemStorage6", "ItemStorage7"}
+
+-- Equip all 7 items simultaneously
+for , itemName in pairs(items) do
+    coroutine.wrap(function() equipItem(itemName) end)()
+end
+wait(S_time3)
+
+-- Use all 7 items simultaneously
+for , itemName in pairs(items) do
+    coroutine.wrap(function() useItem(itemName) end)()
+end
+
+wait(S_time2)
+local args = {[1] = "Better Clothes"}
+game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
+wait(S_time2)
