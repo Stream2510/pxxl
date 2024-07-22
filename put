@@ -1,0 +1,9 @@
+local items = {"ItemStorage1", "ItemStorage2", "ItemStorage3", "ItemStorage4", "ItemStorage5", "ItemStorage6", "ItemStorage7"}
+
+for _, itemName in pairs(items) do
+    coroutine.wrap(function(itemName)
+        local args = {[1] = itemName}
+        game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    end)(itemName)
+end
+wait()
