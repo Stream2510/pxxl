@@ -1,16 +1,6 @@
-
-
-Verify
-
-Open In Editor
-Edit
-Copy code
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local PlayerValues = LocalPlayer.PlayerValues
-local Specialization = PlayerValues.Specialization
-local Race = PlayerValues.Race
-
+local Player = game:GetService("Players")
+local Specs = Player.LocalPlayer.PlayerValues.Specialization
+local Races = Player.LocalPlayer.PlayerValues.Race
 local S_time = 1.5
 local S_time2 = 1
 local S_time3 = 2.5
