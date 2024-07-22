@@ -1,4 +1,4 @@
-
+_G.SSpin = true
 local S_time = 1.5
 local S_time2 = 1
 local S_time3 = 2.5
