@@ -1,0 +1,27 @@
+local player = game.Players.LocalPlayer
+local character = player.Character
+local backpack = player.Backpack
+
+-- Get the first 7 items in the inventory
+local items = {}
+for i = 1, 7 do
+    local item = backpack:FindFirstChild(i)
+    if item then
+        table.insert(items, item)
+    end
+end
+
+-- Equip each item simultaneously using coroutines
+local function equipItem(item)
+    item.Parent = character
+end
+
+local coroutines = {}
+for _, item in pairs(items) do
+    table.insert(coroutines, coroutine.wrap(equipItem)(item))
+end
+
+-- Wait for all coroutines to finish
+for _, coroutine in pairs(coroutines) do
+    coroutine:wait()
+end
