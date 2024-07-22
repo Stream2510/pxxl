@@ -23,7 +23,7 @@ local items = {"ItemStorage1", "ItemStorage2", "ItemStorage3", "ItemStorage4", "
 for , itemName in pairs(items) do
     coroutine.wrap(function() equipItem(itemName) end)()
 end
-wait(Stime3)
+wait(S_time3)
 
 -- Use all 7 items simultaneously
 for , itemName in pairs(items) do
