@@ -1,0 +1,7 @@
+_G.auto = true
+    spawn(function()
+    while _G.auto == true do
+        game:GetService("ReplicatedStorage"):WaitForChild("RemoteEvents"):WaitForChild("LevelingRemote"):FireServer()
+        wait(0)
+    end
+end)
