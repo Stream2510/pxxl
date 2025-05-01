@@ -1,0 +1,101 @@
+_G.SSpin = true
+local S_time = 1.5
+local S_time2 = 1
+local S_time3 = 2.5
+function autopres()
+    local args = { [1] ="ItemStorage1"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage1"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+    
+    local args = {
+        [1] ="ItemStorage2"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage2"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+        [1] ="ItemStorage3"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage3"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+        [1] ="ItemStorage4"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage4"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+        [1] ="ItemStorage5"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage5"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+        [1] ="ItemStorage6"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage6"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+        [1] ="ItemStorage7"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait(S_time)
+    game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool").Parent = game.Players.LocalPlayer.Character
+    wait(S_time2)
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemRemote:FireServer()
+    local args = {
+        [1] ="ItemStorage7"}
+    game:GetService("ReplicatedStorage").RemoteEvents.ItemStorageRemote:FireServer(unpack(args))
+    wait (S_time2)
+
+    local args = {
+    [1] = "Be Rewarded"}
+game:GetService("ReplicatedStorage").RemoteEvents.ShenronRemote:FireServer(unpack(args))
+    wait(S_time2)
+while _G.SSpin do
+    autopres()
+end
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+wait(1)
+vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
