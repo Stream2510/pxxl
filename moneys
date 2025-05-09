@@ -1,3 +1,9 @@
+-- Made by amulet#04041
+
+
+
+
+
 local DropGUI = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local Equip = Instance.new("TextButton")
